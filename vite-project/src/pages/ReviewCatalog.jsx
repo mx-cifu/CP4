@@ -1,7 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 const ReviewCatalog = () => (
-    <h1>This is the review catalog</h1>
+    <>
+        < Header />
+        <h1>This is the review catalog</h1>
+    </>
 )
 
 export default ReviewCatalog;
