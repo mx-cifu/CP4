@@ -7,6 +7,7 @@ import  Blog  from './pages/Blog'
 import  ReviewCatalog  from './pages/ReviewCatalog'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import Login from './components/Login';
 
 function App() {
   
