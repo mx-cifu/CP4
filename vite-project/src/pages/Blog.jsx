@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from '../components/Header';
+import NewPost from '../components/NewPost';
 
 const Blog = () => (
     <>
         < Header />
-        <h1>This is the Blog</h1>
+        < NewPost />
     </>
 )
 
