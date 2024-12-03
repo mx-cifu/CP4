@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1733214193203" clover="3.2.0">
+  <project timestamp="1733214193203" name="All files">
+    <metrics statements="127" coveredstatements="95" conditionals="30" coveredconditionals="23" methods="41" coveredmethods="29" elements="198" coveredelements="147" complexity="0" loc="127" ncloc="127" packages="2" files="10" classes="10"/>
+    <package name="components">
+      <metrics statements="108" coveredstatements="91" conditionals="28" coveredconditionals="23" methods="32" coveredmethods="27"/>
+      <file name="Header.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/components/Header.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+      <file name="LoadPosts.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/components/LoadPosts.jsx">
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="24" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="65" count="4" type="stmt"/>
+      </file>
+      <file name="Login.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/components/Login.jsx">
+        <metrics statements="28" coveredstatements="17" conditionals="14" coveredconditionals="9" methods="7" coveredmethods="5"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="36" count="4" type="cond" truecount="2" falsecount="2"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="45" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="100" count="5" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="137" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="138" count="0" type="stmt"/>
+        <line num="152" count="5" type="stmt"/>
+        <line num="169" count="0" type="stmt"/>
+        <line num="185" count="1" type="stmt"/>
+      </file>
+      <file name="NewPost.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/components/NewPost.jsx">
+        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="22" type="stmt"/>
+        <line num="17" count="22" type="stmt"/>
+        <line num="18" count="22" type="stmt"/>
+        <line num="19" count="22" type="stmt"/>
+        <line num="21" count="22" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="37" count="22" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="57" count="4" type="stmt"/>
+        <line num="66" count="3" type="stmt"/>
+      </file>
+      <file name="Posts.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/components/Posts.jsx">
+        <metrics statements="34" coveredstatements="30" conditionals="10" coveredconditionals="10" methods="9" coveredmethods="8"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="61" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="68" count="5" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="75" count="5" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="80" count="5" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="89" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="98" count="4" type="stmt"/>
+      </file>
+      <file name="UserBlog.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/components/UserBlog.jsx">
+        <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="19" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="2"/>
+      <file name="Blog.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/pages/Blog.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="BlogCatalog.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/pages/BlogCatalog.jsx">
+        <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+      </file>
+      <file name="Home.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/pages/Home.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="NotFound.jsx" path="/Users/mx.cifu/Desktop/AD320 Projects/CP4/vite-project/src/pages/NotFound.jsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

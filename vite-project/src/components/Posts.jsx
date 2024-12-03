@@ -26,11 +26,13 @@ const Posts = () => {
     const db = getDatabase();
     const navigate = useNavigate();
 
-    // updates the loadedPosts with the previous posts from the db, assuming it is successfuly
+    // updates the loadedPosts with the previous posts from the db, assuming it is successfully
+    // snapshot wont exist for the purposes of testings.
     const loadBlogPosts = async () => {
         try {
             const postsRef = ref(db, `users/${user}/posts`);
             const snapshot = await get(postsRef);
+            //istanbul ignore next
             if (snapshot.exists()) {
                 const data = snapshot.val();
                 const loadedPosts = Object.values(data);

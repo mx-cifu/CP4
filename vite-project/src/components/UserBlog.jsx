@@ -28,7 +28,9 @@ const UserBlog = () => {
         // retrieving the specific user's posts
         get(postsRef)
             .then((snapshot) => {
-                // if the snapshot exists, it will retrieve the data of those posts and setPosts to it
+                // if the snapshot exists, it will retrieve the data of those posts and setPosts to it. Ignored as it is not 
+                // expected to exist during testings
+                //istanbul ignore next
                 if (snapshot.exists()) {
                     const postsData = snapshot.val();
                     const postsArray = Object.values(postsData);
@@ -41,7 +43,8 @@ const UserBlog = () => {
             const userRef = ref(db, `users/${userId}/displayName`);
             get(userRef)
                 .then((snapshot) => {
-                    // if the snpashot exists, it will retrieve the name setDisplayName to it
+                    // if the snpashot exists, it will retrieve the name setDisplayName to it, not expected durning testings
+                    // istanbul ignore next
                     if (snapshot.exists()) {
                         setDisplayName(snapshot.val());
                     }

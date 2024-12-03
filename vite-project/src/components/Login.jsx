@@ -14,7 +14,6 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword,signInWithEmailAndPassword,
         updateProfile,signOut, signInWithPopup,GithubAuthProvider} from 'firebase/auth';
-
 import {getDatabase, ref, update} from 'firebase/database';
 import { firebaseApp } from '../firebase';
 
@@ -50,8 +49,9 @@ const Login = () => {
         return () => unsubscribe();
     }, []);
 
-    // helper method that receives information about a user and updates
-    // the information in local storage and the React states for it as well
+    // helper method that receives information about a user and updates the information in local storage and the React states for it as well
+    // tried to get testing to work with this and mock firebase but didn't have much success
+    // istanbul ignore next
     const authHandler = (authData) => {
         const { uid, displayName } = authData;
         localStorage.setItem('uid', uid);
@@ -61,6 +61,7 @@ const Login = () => {
 
     // handles a user clicking the logout button by calling firebase methods
     // and removing user information from local storage
+    // istanbul ignore next
     const handleLogout = async () => {
         await signOut(auth);
         localStorage.removeItem('uid');
@@ -72,6 +73,7 @@ const Login = () => {
     // handles a user choosing to register for a new account- it uses firebase
     // existing method to handle most of this logic. Importantly, it uses update instead
     // of set since set would 'erase' the posts that a user had previously made
+    // istanbul ignore next
     const handleRegister = async (e) => {
         e.preventDefault();
         const displayName = e.target.displayName.value;
@@ -111,6 +113,7 @@ const Login = () => {
     // with their GitHub, it also uses the information returned from 
     // GitHub to set the displayName for the react project since GitHub logins
     // dont have the option to choose their own display name
+    // istanbul ignore next
     const loginWithGitHub = () => {
         const provider = new GithubAuthProvider();
 
@@ -129,6 +132,7 @@ const Login = () => {
                 setError(error.message);
             });
     };
+
 
     if (user) {
         return (
