@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: start;
   background-color: #bcb8b1; 
-  height: 100vh; 
-  width: 100vw;
+  height: 100%; 
+  width: 100%;
   flex-wrap: wrap; 
+  overflow-y: auto;
 }
 
 html, body {
@@ -68,78 +69,230 @@ li > a{
 }
 
 
-.blog-div {
-  display: flex; 
+.blog-container {
+  margin: 2rem;
+  padding: 2rem;
+  width: 80%;
+  border: 1px solid #cbcaca;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.drop-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dropdown-button {
+  padding: 10px 20px;
+  background-color: #e0afa0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #c69586;
+}
+
+.form-container {
+  margin-top: 2rem;
+  padding: 2rem 2.2rem;
+  border-top: 1px solid #dedada;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #c7c6c6;
+  border-radius: .5rem;
+  font-size: 1rem;
+}
+
+.form-container button {
+  padding: .5rem 1.25rem;
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: .25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-container button:hover {
+  background-color: #218838;
+}
+
+.posts-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: .1rem solid #d9d6d6;
+}
+
+.blog-list > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.blog-list li {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  border: .2rem solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-list > h2, .blog-list >p{
+  color: black;
+}
+
+.blog-item > h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #2d2c2c;
+}
+.blog-item  > h4 {
+  font-size: .75rem;
+  color: #908e8e;
+}
+
+.blog-item pre {
+  font-size: 1.25rem;
+  color: #5b5959;
+}
+
+
+.spinner-container {
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; 
-  height: 100%; 
-  background-color: #bcb8b1;
-  overflow: scroll;
 }
 
-.blog-container {
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: center;
-  width: 80%; 
-  height: 90%; 
-  background-color: whitesmoke;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-top: 2rem;
+.spinner-container > img {
+  width: 40%;
+  height: 40%;
 }
 
-.collapsed-header {
-  width: 100%; 
-  color: grey; 
-  font-size: 1.5rem; 
-  text-align: center; 
-  cursor: pointer; 
-}
 
-.new-post {
-  width: 90%;
-  padding: 16px;
-  background-color: #6a0101;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 16px; 
-  margin-top: 2rem;
-}
-
-.blog-form {
+.registration-form, .login-form {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-left: 2.5em;
 }
 
-.title-row {
-  display: flex;
-  align-items: center; 
-  gap: 16px; 
-}
 
-.title-row > label {
-  margin-right: 5.5rem;
-  font-size: 1.5rem;
-}
-
-.title-row > label > input {
-  margin-left: 1rem;
-}
-
-textarea {
-  width: 90%; 
-  min-height: 20rem; 
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.registration-form input, .login-form > input {
+  padding: .5rem;
+  border: 1px solid #a2a0a0;
+  border-radius: .2rem;
   font-size: 1rem;
-  resize: none;
+}
+
+
+.registration-form > button, .login-form > button {
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: .25rem;
+}
+
+#git-login{
+  background-color: #373737;
+  color: white;
+}
+
+#git-login:hover {
+  background-color: #191919;
+}
+
+#login-button, #register-button {
+  background-color: #e0afa0;
+  color: #f7f7f7;
+}
+
+#login-button:hover, #register-button:hover {
+  background-color: #c69586;
+}
+
+.registration-form > p > button, .login-form > p > button {
+  background: none;
+  color: #969a9a;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.registration-form > p  > button:hover, .login-form >  p > button:hover {
+  color: #0056b3;
+}
+
+#logout-button {
+  background-color: #e0afa0;
+  color: white;
+}
+
+#logout-button:hover {
+  background-color: #c69586
+}
+
+.blog-catalog-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+  align-items: center; 
+  background-color: #bcb8b1; 
+}
+
+.user-section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  border: 1px solid #cccccc; 
+  border-radius: .5rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  gap: 1rem; 
+  margin-top: 4rem;
+}
+
+.user-list {
+  list-style: none; 
+  display: flex;
+  flex-direction: column;
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+  gap: 1rem;
+}
+
+.user-list > li {
+  background-color: white; 
+  border: 1px solid grey;
+  border-radius: .5rem;
+  padding: .75rem;
+  font-size: 1rem;
+  text-align: center; 
+  
+}
+
+.user-list > li > a {
+  color: black;
 }

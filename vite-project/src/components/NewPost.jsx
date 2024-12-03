@@ -1,102 +1,70 @@
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+/**
+ * Name: Maximiliano Cifuentes
+ * Date: 11/28/2024
+ * 
+ * This is my NewPost.jsx file which is a component that handles a user wanting to create a new post
+ * for their own personal blog. I made it into its own separate component since the Posts.jsx serves as the 
+ * parent for this component, and for LoadPosts.jsx. Keeping it in another component that is able to accept
+ * props allows for greater separation of concerns as well. 
+ */
 
-const NewPost = () => {
-    const [isCollapsed, setIsCollapsed] = useState(true);
+import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
+
+const NewPost = ({ onAddPost }) => {
+    // Initializes several states to keep track of the essential parts of the blog posts
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
     const [author, setAuthor] = useState('');
-
-    const user = localStorage.getItem('uid');
-    const navigate = useNavigate();
-
-
-    const handleHomeClick = (e) =>
-    {
-        e.preventDefault();
-        navigate('/home');
-    }
-
-    const handleCollapse = (e) => {
-        e.preventDefault();
-        
-        if (isCollapsed) {
-            setIsCollapsed(false);
-        } else {
-            setIsCollapsed(true);
-        }
-    }
-
+    const postInputRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    }
 
-    if (!user) {
-        return (
-            <div className = 'not-logged-post'>
-                <h2>Please visit Home to login to be able to create a new post, and view your previous posts!</h2>
-                <button onClick={(handleHomeClick)}>Go to Home</button> 
-            </div>
-        );
-    }
+        // new timestamp for a post
+        const timestamp = new Date().toISOString();
+        const post = { title, text, author, timestamp };
 
+        onAddPost(post);
+
+        // resets the fields
+        setTitle('');
+        setText('');
+        setAuthor('');
+    };
+
+    // the form that is rendered for a new blog submission
     return (
-        <div className = 'blog-div'>
-            {isCollapsed ? (
-                <div className = 'blog-container'>
-                    <section className = 'collapsed-header'>
-                        <button onClick={handleCollapse} className="header-button">
-                           Write a New Blog Post</button>
-                    </section>
-                </div>
-            ) : (
-                <div className="blog-container">
-                    <section className="new-post">
-                        <form className="blog-form" onSubmit={handleSubmit}>
-                            <div className="title-row">
-                                <label>
-                                    Title:
-                                    <input
-                                        type="text"
-                                        value={title}
-                                        onChange={(e) => setTitle(e.target.value)}
-                                        required
-                                    />
-                                </label>
+        <form className="blog-form" onSubmit={handleSubmit}>
+            <input
+                type="text"
+                placeholder="Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                ref={postInputRef}
+                required
+            />
+            <input
+                type="text"
+                placeholder="Author"
+                value={author}
+                onChange={(e) => setAuthor(e.target.value)}
+                required
+            />
+            <textarea
+                placeholder="Write your post here..."
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                required
+            />
+            <button type="submit">Submit</button>
+        </form>
+    );
+};
 
-                                <label>
-                                    Author:
-                                    <input 
-                                        type = 'text'
-                                        value = {author}
-                                        onChange = {(e) => setAuthor(e.target.value)}
-                                        required 
-                                    />
-                                </label>
-                                <button type="submit">Submit</button>
-                                <button type="button" onClick={handleCollapse}>
-                                    Cancel
-                                </button>
-                            </div>
-                            <label>
-                                <textarea
-                                    value={text}
-                                    onChange={(e) => setText(e.target.value)}
-                                    required
-                                    placeholder = "Write your review here"
-                                />
-                            </label>
-                        </form>
-                    </section>
-
-                </div>
-            )}
-        
-        
-        </div>
-    )
-        
-}   
+// prop function passed in from Posts
+NewPost.propTypes = {
+    onAddPost: PropTypes.func.isRequired,
+};
 
 export default NewPost;
