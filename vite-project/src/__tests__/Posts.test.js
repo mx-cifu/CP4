@@ -44,11 +44,11 @@ describe('testing Post component with some mock functions from Jest', () => {
 
         fireEvent.change(screen.getByPlaceholderText('Title'), { target: { value: 'New Post' } });
         fireEvent.change(screen.getByPlaceholderText('Author'), { target: { value: 'New Author' } });
-        fireEvent.change(screen.getByPlaceholderText('Write your post here...'), { target: { value: 'New text' } });
+        fireEvent.change(screen.getByPlaceholderText('Write your new post here!'), { target: { value: 'New test text' } });
         fireEvent.click(screen.getByText('Submit'));
 
         await waitFor(() => {
-            expect(screen.getByText('New text')).toBeInTheDocument();
+            expect(screen.getByText('New test text')).toBeInTheDocument();
             expect(screen.getByText((content) => content.includes('New Author'))).toBeInTheDocument();
         });
     });

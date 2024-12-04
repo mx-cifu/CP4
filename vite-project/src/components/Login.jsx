@@ -51,7 +51,7 @@ const Login = () => {
 
     // helper method that receives information about a user and updates the information in local storage and the React states for it as well
     // tried to get testing to work with this and mock firebase but didn't have much success
-    // istanbul ignore next
+    
     const authHandler = (authData) => {
         const { uid, displayName } = authData;
         localStorage.setItem('uid', uid);
@@ -61,7 +61,7 @@ const Login = () => {
 
     // handles a user clicking the logout button by calling firebase methods
     // and removing user information from local storage
-    // istanbul ignore next
+
     const handleLogout = async () => {
         await signOut(auth);
         localStorage.removeItem('uid');
@@ -73,7 +73,7 @@ const Login = () => {
     // handles a user choosing to register for a new account- it uses firebase
     // existing method to handle most of this logic. Importantly, it uses update instead
     // of set since set would 'erase' the posts that a user had previously made
-    // istanbul ignore next
+    
     const handleRegister = async (e) => {
         e.preventDefault();
         const displayName = e.target.displayName.value;

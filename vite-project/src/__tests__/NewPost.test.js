@@ -15,7 +15,7 @@ describe('testing NewPost Component', () => {
 
         expect(screen.getByPlaceholderText('Title')).toBeInTheDocument();
         expect(screen.getByPlaceholderText('Author')).toBeInTheDocument();
-        expect(screen.getByPlaceholderText('Write your post here...')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Write your new post here!')).toBeInTheDocument();
         expect(screen.getByRole('button', { name: /Submit/i })).toBeInTheDocument();
     });
 
@@ -24,11 +24,11 @@ describe('testing NewPost Component', () => {
   
         fireEvent.change(screen.getByPlaceholderText('Title'), { target: { value: 'My Test Blog Title' } });
         fireEvent.change(screen.getByPlaceholderText('Author'), { target: { value: 'John Doe' } });
-        fireEvent.change(screen.getByPlaceholderText('Write your post here...'), { target: { value: 'This is my test blog content.' } });
+        fireEvent.change(screen.getByPlaceholderText('Write your new post here!'), { target: { value: 'This is my test blog content.' } });
 
         expect(screen.getByPlaceholderText('Title')).toHaveValue('My Test Blog Title');
         expect(screen.getByPlaceholderText('Author')).toHaveValue('John Doe');
-        expect(screen.getByPlaceholderText('Write your post here...')).toHaveValue('This is my test blog content.');
+        expect(screen.getByPlaceholderText('Write your new post here!')).toHaveValue('This is my test blog content.');
     });
 
     test('calls onAddPost with correct data on form submission', () => {
@@ -36,7 +36,7 @@ describe('testing NewPost Component', () => {
  
         fireEvent.change(screen.getByPlaceholderText('Title'), { target: { value: 'My Test Blog Title' } });
         fireEvent.change(screen.getByPlaceholderText('Author'), { target: { value: 'John Doe' } });
-        fireEvent.change(screen.getByPlaceholderText('Write your post here...'), { target: { value: 'This is my test blog content.' } });
+        fireEvent.change(screen.getByPlaceholderText('Write your new post here!'), { target: { value: 'This is my test blog content.' } });
 
         fireEvent.click(screen.getByRole('button', { name: /Submit/i }));
 
@@ -56,7 +56,7 @@ describe('testing NewPost Component', () => {
 
         fireEvent.change(screen.getByPlaceholderText('Title'), { target: { value: 'My Test Blog Title' } });
         fireEvent.change(screen.getByPlaceholderText('Author'), { target: { value: 'John Doe' } });
-        fireEvent.change(screen.getByPlaceholderText('Write your post here...'), { target: { value: 'This is my test blog content.' } });
+        fireEvent.change(screen.getByPlaceholderText('Write your new post here!'), { target: { value: 'This is my test blog content.' } });
 
         fireEvent.click(screen.getByRole('button', { name: /Submit/i }));
 
