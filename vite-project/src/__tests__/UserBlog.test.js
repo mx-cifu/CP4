@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { getDatabase, ref, get } from 'firebase/database';
 import UserBlog from '../components/UserBlog';
 
+// jest mock firebase functions
 jest.mock('firebase/database', () => ({
     getDatabase: jest.fn(() => ({})),
     ref: jest.fn(),

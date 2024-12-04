@@ -40,7 +40,7 @@ const LoadBlogPosts = ({ posts, displayName }) => {
                 <ul>
                     {sortedPosts.map((post, index) => {
                         const {date, time} = getDateAndTime(post.timestamp);
-                        /* Return each ListItem (in this case each blog post and dynamically render it*/
+                        /* Return each ListItem, in this case each blog post and dynamically render it*/
                         return( 
                             <li key={index} className="blog-item">
                                 <h3>{post.title}</h3>

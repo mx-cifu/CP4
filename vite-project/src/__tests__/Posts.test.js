@@ -3,6 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Posts from '../components/Posts'; 
 
+// jest mock functinos for firebase
 jest.mock('firebase/database', () => ({
     getDatabase: jest.fn(() => ({})),
     ref: jest.fn(),
@@ -26,7 +27,7 @@ jest.mock('react-router-dom', () => ({
     useNavigate: jest.fn(() => jest.fn()),
 }));
 
-describe('Posts Component', () => {
+describe('testing Post component with some mock functions from Jest', () => {
     beforeEach(() => {
         localStorage.setItem('uid', 'testUser');
     });

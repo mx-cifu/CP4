@@ -3,11 +3,10 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '../components/Header';
 
-describe('Header Component', () => {
+describe('testing header component', () => {
     test('displays all the expected navigation link', () => {
         render(<Header />);
 
-        // checks nav links
         expect(screen.getByText('Home')).toBeInTheDocument();
         expect(screen.getByText('Blog')).toBeInTheDocument();
         expect(screen.getByText('Blog Forum')).toBeInTheDocument();

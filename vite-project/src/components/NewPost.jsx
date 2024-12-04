@@ -52,7 +52,7 @@ const NewPost = ({ onAddPost }) => {
                 required
             />
             <textarea
-                placeholder="Write your post here..."
+                placeholder="Write your new post here!"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 required

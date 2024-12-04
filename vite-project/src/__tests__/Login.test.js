@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Login from '../components/Login';
 
-describe('Login Component', () => {
+describe('testing Login component and some functions', () => {
     
     test('renders login form by default', () => {
         render(<Login />);

@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import NewPost from '../components/NewPost';
 
-describe('NewPost Component', () => {
+describe('testing NewPost Component', () => {
     const mockOnAddPost = jest.fn();
 
     beforeEach(() => {
@@ -19,7 +19,7 @@ describe('NewPost Component', () => {
         expect(screen.getByRole('button', { name: /Submit/i })).toBeInTheDocument();
     });
 
-    test('checks if user inpt is handled as expected', () => {
+    test('checks if user input is handled as expected', () => {
         render(<NewPost onAddPost={mockOnAddPost} />);
   
         fireEvent.change(screen.getByPlaceholderText('Title'), { target: { value: 'My Test Blog Title' } });
@@ -62,6 +62,6 @@ describe('NewPost Component', () => {
 
         expect(screen.getByPlaceholderText('Title')).toHaveValue('');
         expect(screen.getByPlaceholderText('Author')).toHaveValue('');
-        expect(screen.getByPlaceholderText('Write your post here...')).toHaveValue('');
+        expect(screen.getByPlaceholderText('Write your new post here!')).toHaveValue('');
     });
 });

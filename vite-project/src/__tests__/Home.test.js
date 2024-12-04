@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 
 jest.mock('../components/Header', () => () => <nav>fake test header</nav>);
 
-describe('Home Component with Mocked Header', () => {
+describe('testing Home component with Mocked Header', () => {
     test('renders header and login within home', () => {
         render(<Home />);
 
